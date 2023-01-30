@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * This program must read a input stream and keeps track of the 
  * frequency at which an avenger is mentioned either by name or alias.
  *
- * @author Maryam Elahi
+ * @author Jackie Zheng, Jayden Eusebio-Wong, Jordan Mercurio
  * @date Winter 2023
 */
 
