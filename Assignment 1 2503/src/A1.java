@@ -45,7 +45,10 @@ public class A1 {
 				- Create a new avenger object with the corresponding alias and last name.
 				- if this avenger has already been mentioned, increase the frequency count for the object already in the list.
 				- if this avenger has not been mentioned before, add the newly created avenger to the list, remember to set the frequency.
+				
+				Finish this part today
 		*/ 
+		
 	}
 
 	/**
