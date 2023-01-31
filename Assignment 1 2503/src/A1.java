@@ -46,7 +46,6 @@ public class A1 {
 				- if this avenger has already been mentioned, increase the frequency count for the object already in the list.
 				- if this avenger has not been mentioned before, add the newly created avenger to the list, remember to set the frequency.
 				
-				Finish this part today
 		*/ 
 		
 	}
