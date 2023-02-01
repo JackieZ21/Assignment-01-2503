@@ -11,7 +11,7 @@ import java.util.Scanner;
 */
 
 public class A1 {
-//	Scanner input;
+	Scanner input;
 	
 	public String[][] avengerRoster = { { "captainamerica", "rogers" }, { "ironman", "stark" },
 			{ "blackwidow", "romanoff" }, { "hulk", "banner" }, { "blackpanther", "tchalla" }, { "thor", "odinson" },
@@ -28,14 +28,6 @@ public class A1 {
 	}
 
 	public void run() {
-		
-//		input = new Scanner(System.in);
-//		while (input.hasNext()) {
-//			String word = input.next().trim().toLowerCase().replaceAll("[^a-z]", "");
-//			if (word.length()>0) {
-//				System.out.println(word);
-//			}
-//		}
 		
 		readInput();
 		printResults();
@@ -57,6 +49,13 @@ public class A1 {
 				- if this avenger has not been mentioned before, add the newly created avenger to the list, remember to set the frequency.
 				
 		*/ 
+		input = new Scanner(System.in);
+		while (input.hasNext()) {
+			String word = input.next().trim().toLowerCase().replaceAll("[^a-z]", "");
+			if (word.length()>0) {
+				System.out.println(word);
+			}
+		}
 		
 	}
 
