@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+import java.util.Scanner;
 /** 
  * COMP 2503 Winter 2023 Assignment 1 
  * 
@@ -11,7 +11,8 @@ import java.util.ArrayList;
 */
 
 public class A1 {
-
+//	Scanner input;
+	
 	public String[][] avengerRoster = { { "captainamerica", "rogers" }, { "ironman", "stark" },
 			{ "blackwidow", "romanoff" }, { "hulk", "banner" }, { "blackpanther", "tchalla" }, { "thor", "odinson" },
 			{ "hawkeye", "barton" }, { "warmachine", "rhodes" }, { "spiderman", "parker" },
@@ -27,6 +28,15 @@ public class A1 {
 	}
 
 	public void run() {
+		
+//		input = new Scanner(System.in);
+//		while (input.hasNext()) {
+//			String word = input.next().trim().toLowerCase().replaceAll("[^a-z]", "");
+//			if (word.length()>0) {
+//				System.out.println(word);
+//			}
+//		}
+		
 		readInput();
 		printResults();
 	}
