@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 /** 
  * COMP 2503 Winter 2023 Assignment 1 
@@ -61,21 +62,44 @@ public class A1 {
 		System.out.println("All avengers in the order they appeared in the input stream:");
 		// Todo: Print the list of avengers in the order they appeared in the input
 		// Make sure you follow the formatting example in the sample output
+		
+		// Looks for all the avengers that appeared in the input
+			for(Avenger avenger:avengersArrayList) {
+				System.out.println(avenger.getAlias() + " " + avenger.getLastName() + " " + avenger.getFrequency() + " stream(s)");
+			}
 		System.out.println();
 		
 		System.out.println("Top " + topN + " most popular avengers:");
 		// Todo: Print the most popular avengers, see the instructions for tie breaking
 		// Make sure you follow the formatting example in the sample output
+		
+		//Sorts the avengers that are the most popular to least
+			Collections.sort(avengersArrayList, new AvengerComparator(AvengerComparator.SortType.DECENDING));
+			for(int i = 0; i < topN && i < avengersArrayList.size(); i++) {
+				System.out.println(avengersArrayList.get(i).getAlias() + " " + avengersArrayList.get(i).getLastName() + " " + avengersArrayList.get(i).getFrequency());
+			}
 		System.out.println();
 
 		System.out.println("Top " + topN + " least popular avengers:");
 		// Todo: Print the least popular avengers, see the instructions for tie breaking
-		// Make sure you follow the formatting example in the sample output		
+		// Make sure you follow the formatting example in the sample output
+		
+		//Sorts aengers that are least popular to most
+			Collections.sort(avengersArrayList, new AvengerComparator(AvengerComparator.SortType.ASCENDING));
+			for(int i = 0; i < topN && i < avengersArrayList.size(); i++) {
+				System.out.println(avengersArrayList.get(i).getAlias() + " " + avengersArrayList.get(i).getLastName() + " " + avengersArrayList.get(i).getFrequency());
+			}
 		System.out.println();
 
 		System.out.println("All mentioned avengers in alphabetical order:");
 		// Todo: Print the list of avengers in alphabetical order
 		// Make sure you follow the formatting example in the sample output
+		
+		//Sorts the avengers alphabetically 
+			Collections.sort(avengersArrayList, new AvengerComparator(AvengerComparator.SortType.ALPHABETICAL));
+			for(Avenger avenger : avengersArrayList) {
+				System.out.println(avenger.getAlias() + " " + avenger.getLastName() + " " + avenger.getFrequency());
+			}
 		System.out.println();
 	}
 }
