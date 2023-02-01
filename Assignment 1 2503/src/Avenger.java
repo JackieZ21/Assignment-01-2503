@@ -1,7 +1,7 @@
 public class Avenger implements Comparable<Avenger> {
-	private String alias;
+	String alias;
 	private String lastName;
-	private int frequency;
+	int frequency;
 	private int order;
 
 	public Avenger(String alias, String lastName) {

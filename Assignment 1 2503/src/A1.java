@@ -11,7 +11,7 @@ import java.util.Scanner;
 */
 
 public class A1 {
-	
+	Scanner input;
 	
 	public String[][] avengerRoster = { { "captainamerica", "rogers" }, { "ironman", "stark" },
 			{ "blackwidow", "romanoff" }, { "hulk", "banner" }, { "blackpanther", "tchalla" }, { "thor", "odinson" },
@@ -48,8 +48,8 @@ public class A1 {
 				- if this avenger has already been mentioned, increase the frequency count for the object already in the list.
 				- if this avenger has not been mentioned before, add the newly created avenger to the list, remember to set the frequency.	
 		*/ 
-	}
 
+	}
 	/**
 	 * print the results
 	 */
