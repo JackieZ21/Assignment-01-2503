@@ -49,7 +49,7 @@ public class A1 {
 				- if this avenger has not been mentioned before, add the newly created avenger to the list, remember to set the frequency.
 				
 		*/ 
-		input = new Scanner(System.in);
+		Scanner input = new Scanner(System.in);
 		while (input.hasNext()) {
 			String word = input.next().trim().toLowerCase().replaceAll("[^a-z]", "");
 			if (word.length()>0) {
