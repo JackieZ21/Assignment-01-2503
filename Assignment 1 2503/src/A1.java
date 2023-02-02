@@ -13,7 +13,9 @@ import java.util.Scanner;
 
 public class A1 {
 	Scanner input;
-	
+	Avenger avenger = new Avenger(" "," ");
+
+
 	public String[][] avengerRoster = { { "captainamerica", "rogers" }, { "ironman", "stark" },
 			{ "blackwidow", "romanoff" }, { "hulk", "banner" }, { "blackpanther", "tchalla" }, { "thor", "odinson" },
 			{ "hawkeye", "barton" }, { "warmachine", "rhodes" }, { "spiderman", "parker" },
@@ -68,11 +70,16 @@ public class A1 {
 						} else {
 							avengersArrayList.add(new Avenger(avenger[0], avenger[1]));
 						}
+						 
 						break;
 					}
-				}printResults();
+					
+				}
+				
+				printResults();
 			}
-		}
+		} 
+		
 	}
 	/**
 	 * print the results
@@ -88,7 +95,8 @@ public class A1 {
 		
 		// Looks for all the avengers that appeared in the input
 			for(Avenger avenger:avengersArrayList) {
-				System.out.println(avenger.getAlias() + " " + avenger.getLastName() + " " + avenger.getFrequency() + " stream(s)");
+				System.out.println(avenger.getAlias() + " aka " + avenger.getLastName() + " mentioned " + avenger.getFrequency() + " times(s) ");
+				
 			}
 		System.out.println();
 		
@@ -97,21 +105,25 @@ public class A1 {
 		// Make sure you follow the formatting example in the sample output
 		
 		//Sorts the avengers that are the most popular to least
-			Collections.sort(avengersArrayList, new AvengerComparator(AvengerComparator.SortType.DECENDING));
-			for(int i = 0; i < topN && i < avengersArrayList.size(); i++) {
-				System.out.println(avengersArrayList.get(i).getAlias() + " " + avengersArrayList.get(i).getLastName() + " " + avengersArrayList.get(i).getFrequency());
-			}
+		
+			Collections.sort(avengersArrayList, (avenger1, avenger2) -> avenger2.getFrequency() - avenger1.getFrequency());
+				for(int i = 0; i < topN && i < avengersArrayList.size(); i++) {
+					System.out.println(avengersArrayList.get(i).getAlias() + " aka " + avengersArrayList.get(i).getLastName() + " mentioned " + avengersArrayList.get(i).getFrequency() + " time(s) ");
+		
+				}
 		System.out.println();
 
 		System.out.println("Top " + topN + " least popular avengers:");
 		// Todo: Print the least popular avengers, see the instructions for tie breaking
 		// Make sure you follow the formatting example in the sample output
 		
-		//Sorts aengers that are least popular to most
-			Collections.sort(avengersArrayList, new AvengerComparator(AvengerComparator.SortType.ASCENDING));
-			for(int i = 0; i < topN && i < avengersArrayList.size(); i++) {
-				System.out.println(avengersArrayList.get(i).getAlias() + " " + avengersArrayList.get(i).getLastName() + " " + avengersArrayList.get(i).getFrequency());
-			}
+		//Sorts avengers that are least popular to most
+		
+			Collections.sort(avengersArrayList, (avenger1, avenger2) -> avenger1.getFrequency() - avenger2.getFrequency());
+				for(int i = 0; i < topN && i < avengersArrayList.size(); i++) {
+					System.out.println(avengersArrayList.get(i).getAlias() + " aka " + avengersArrayList.get(i).getLastName() + " mentioned " + avengersArrayList.get(i).getFrequency() + " time(s) ");
+					
+				}
 		System.out.println();
 
 		System.out.println("All mentioned avengers in alphabetical order:");
@@ -119,10 +131,12 @@ public class A1 {
 		// Make sure you follow the formatting example in the sample output
 		
 		//Sorts the avengers alphabetically 
-			Collections.sort(avengersArrayList, new AvengerComparator(AvengerComparator.SortType.ALPHABETICAL));
-			for(Avenger avenger : avengersArrayList) {
-				System.out.println(avenger.getAlias() + " " + avenger.getLastName() + " " + avenger.getFrequency());
-			}
+		
+			Collections.sort(avengersArrayList, (avenger1, avenger2) -> avenger1.getAlias().compareTo(avenger2.getAlias()));
+				for(Avenger avenger : avengersArrayList) {
+					System.out.println(avenger.getAlias() + " aka " + avenger.getLastName() + " mentioned " + avenger.getFrequency() + " time(s) ");
+					
+				}
 		System.out.println();
 	}
 }
