@@ -49,7 +49,30 @@ public class A1 {
 				- if this avenger has already been mentioned, increase the frequency count for the object already in the list.
 				- if this avenger has not been mentioned before, add the newly created avenger to the list, remember to set the frequency.	
 		*/ 
-
+		input = new Scanner(System.in);
+		while(input.hasNext()) {
+			String word = input.next().trim().toLowerCase().replaceAll("[^a-z]", "");
+			if (word.length()>0) {
+				totalwordcount++;
+				for (String[] avenger : avengerRoster) {
+					if (avenger[0].equals(word) || avenger[1].equals(word)) {
+						Avenger found = null;
+						for (Avenger a : avengersArrayList) {
+							if (a.alias.equals(avenger[0])) {
+								found = a;
+								break;
+							}
+						}
+						if (found != null) {
+							found.frequency++;
+						} else {
+							avengersArrayList.add(new Avenger(avenger[0], avenger[1]));
+						}
+						break;
+					}
+				}printResults();
+			}
+		}
 	}
 	/**
 	 * print the results
