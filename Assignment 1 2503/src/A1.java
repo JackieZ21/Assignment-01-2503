@@ -40,6 +40,7 @@ public class A1 {
 	 * read the input stream and keep track  
 	 * how many times avengers are mentioned by alias or last name.
 	 */
+	
 	private void readInput() {
 		/*
 		In a loop, while the scanner object has not reached end of stream,
@@ -73,7 +74,8 @@ public class A1 {
 		        break;
 		      }
 		    } 
-		  } printResults();
+		  } 
+		  printResults();
 		} 
 	
 	}
@@ -90,6 +92,7 @@ public class A1 {
 		// Make sure you follow the formatting example in the sample output
 		
 		// Looks for all the avengers that appeared in the input
+		
 			for(Avenger avenger:avengersArrayList) {
 				System.out.println(avenger.getAlias() + " aka " + avenger.getLastName() + " mentioned " + avenger.getFrequency() + " times(s) ");
 				
