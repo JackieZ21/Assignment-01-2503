@@ -14,7 +14,11 @@ import java.util.Scanner;
 */
 
 public class A1 {
+	
+	//Scanner Object
 	Scanner input;
+	
+	//Avenger Object
 	Avenger avenger = new Avenger(" "," ");
 
 
@@ -56,7 +60,7 @@ public class A1 {
 		
 		*/ 
 		//input = new Scanner(System.in);
-		Scanner input = new Scanner(new File("src/input3.txt"));
+		Scanner input = new Scanner(new File("src/input2.txt"));
 		while(input.hasNext()) {
 		  String word = input.next().trim().toLowerCase().replaceAll("[^a-z]", "");
 		  if (word.length()>0) {
@@ -110,10 +114,10 @@ public class A1 {
 		//Sorts the avengers that are the most popular to least
 		//fixed the sorting for popular
 			Collections.sort(avengersArrayList, (avenger1, avenger2) -> avenger2.getFrequency() - avenger1.getFrequency());
-				for(int most = 0; most < topN && most < avengersArrayList.size(); most++) {
+				for(int most = 0; most < topN & most < avengersArrayList.size(); most++) {
 					System.out.println(avengersArrayList.get(most).getAlias() + " aka " + avengersArrayList.get(most).getLastName() + " mentioned " + avengersArrayList.get(most).getFrequency() + " time(s) ");
-		
 				}
+				
 		System.out.println();
 
 		System.out.println("Top " + topN + " least popular avengers:");
@@ -123,10 +127,10 @@ public class A1 {
 		//Sorts avengers that are least popular to most
 		//fix the sorting for least
 			Collections.sort(avengersArrayList, (avenger1, avenger2) -> avenger1.getFrequency() - avenger2.getFrequency());
-				for(int least = 0; least < topN && least < avengersArrayList.size(); least++) {
-					System.out.println(avengersArrayList.get(least).getAlias() + " aka " + avengersArrayList.get(least).getLastName() + " mentioned " + avengersArrayList.get(least).getFrequency() + " time(s) ");
-					
+				for(int least = 0; least < topN & least < avengersArrayList.size(); least++) {
+					System.out.println(avengersArrayList.get(least).getAlias() + " aka " + avengersArrayList.get(least).getLastName() + " mentioned " + avengersArrayList.get(least).getFrequency() + " time(s) ");		
 				}
+				
 		System.out.println();
 
 		System.out.println("All mentioned avengers in alphabetical order:");
@@ -137,9 +141,9 @@ public class A1 {
 		
 			Collections.sort(avengersArrayList, (avenger1, avenger2) -> avenger1.getAlias().compareTo(avenger2.getAlias()));
 				for(Avenger avenger : avengersArrayList) {
-					System.out.println(avenger.getAlias() + " aka " + avenger.getLastName() + " mentioned " + avenger.getFrequency() + " time(s) ");
-					
+					System.out.println(avenger.getAlias() + " aka " + avenger.getLastName() + " mentioned " + avenger.getFrequency() + " time(s) ");	
 				}
+				
 		System.out.println();
 	}
 	
