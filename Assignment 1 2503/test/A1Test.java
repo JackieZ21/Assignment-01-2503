@@ -3,75 +3,37 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class A1Test {
-
-	@Test
-	void testMain() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testRun() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testObject() {
-		fail("Not yet implemented");
-	}
-
+	/**
+	 * test the implementation of getClass method 
+	 * return proper class type
+	 */
 	@Test
 	void testGetClass() {
-		fail("Not yet implemented");
+		A1 testInstance = new A1();
+		assertEquals(A1.class, testInstance.getClass(), "getClass method does not return the correct class type.");
 	}
-
+	/**
+	 * test the implementation of hashCode method 
+	 */
 	@Test
 	void testHashCode() {
-		fail("Not yet implemented");
-	}
+		A1 testInstance1 = new A1();
+		A1 testInstance2 = new A1();
+		assertNotEquals(testInstance1.hashCode(), testInstance2.hashCode(),
+				"hashCode method does not return unique values for different instances.");
 
+	}
+	/**
+	 * test the implementation of equals method   
+	 * 
+	 */
 	@Test
 	void testEquals() {
-		fail("Not yet implemented");
+		A1 testInstance1 = new A1();
+		A1 testInstance2 = new A1();
+		assertFalse(testInstance1.equals(testInstance2), "equals method returns true for different instances.");
 	}
 
-	@Test
-	void testClone() {
-		fail("Not yet implemented");
-	}
 
-	@Test
-	void testToString() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testNotify() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testNotifyAll() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testWait() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testWaitLong() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testWaitLongInt() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testFinalize() {
-		fail("Not yet implemented");
-	}
 
 }
