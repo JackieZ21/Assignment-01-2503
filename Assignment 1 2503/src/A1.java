@@ -63,7 +63,7 @@ public class A1 {
 		        for (Avenger a : avengersArrayList) {
 		          if (a.alias.equals(avenger[0])) {
 		            found = a;
-		            break;
+		            
 		          }
 		        }
 		        if (found != null) {
