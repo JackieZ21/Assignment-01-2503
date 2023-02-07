@@ -49,7 +49,7 @@ public class A1 {
 		  *  - if the word is not empty, add the word count. 
 		   * - Check if the word is either an avenger alias or last name then
 			*	- Create a new avenger object with the corresponding alias and last name.
-			**	- if this avenger has not been mentioned before, add the newly created avenger to the list, remember to set the frequency.	
+			*	- if this avenger has not been mentioned before, add the newly created avenger to the list, remember to set the frequency.	
 		
 		*/ 
 		input = new Scanner(System.in);
