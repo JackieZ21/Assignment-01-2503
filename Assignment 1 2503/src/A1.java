@@ -56,7 +56,7 @@ public class A1 {
 		
 		*/ 
 		//input = new Scanner(System.in);
-		Scanner input = new Scanner(new File("src/input1.txt"));
+		Scanner input = new Scanner(new File("src/input2.txt"));
 		while(input.hasNext()) {
 		  String word = input.next().trim().toLowerCase().replaceAll("[^a-z]", "");
 		  if (word.length()>0) {
@@ -108,7 +108,7 @@ public class A1 {
 		// Make sure you follow the formatting example in the sample output
 		
 		//Sorts the avengers that are the most popular to least
-		
+		//fixed the sorting for popular
 			Collections.sort(avengersArrayList, (avenger1, avenger2) -> avenger2.getFrequency() - avenger1.getFrequency());
 				for(int i = 0; i < topN && i < avengersArrayList.size(); i++) {
 					System.out.println(avengersArrayList.get(i).getAlias() + " aka " + avengersArrayList.get(i).getLastName() + " mentioned " + avengersArrayList.get(i).getFrequency() + " time(s) ");
@@ -121,7 +121,7 @@ public class A1 {
 		// Make sure you follow the formatting example in the sample output
 		
 		//Sorts avengers that are least popular to most
-		
+		//fix the sorting for least
 			Collections.sort(avengersArrayList, (avenger1, avenger2) -> avenger1.getFrequency() - avenger2.getFrequency());
 				for(int i = 0; i < topN && i < avengersArrayList.size(); i++) {
 					System.out.println(avengersArrayList.get(i).getAlias() + " aka " + avengersArrayList.get(i).getLastName() + " mentioned " + avengersArrayList.get(i).getFrequency() + " time(s) ");
