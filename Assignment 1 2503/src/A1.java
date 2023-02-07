@@ -118,7 +118,7 @@ public class A1 {
 		
 		//Sorts avengers that are least popular to most
 		
-			Collections.sort(avengersArrayList, (avenger1, avenger2) -> avenger1.getFrequency() - avenger2.getFrequency());
+			Collections.sort(avengersArrayList, (avenger1, avenger2) -> avenger2.getFrequency() - avenger1.getFrequency());
 				for(int i = 0; i < topN && i < avengersArrayList.size(); i++) {
 					System.out.println(avengersArrayList.get(i).getAlias() + " aka " + avengersArrayList.get(i).getLastName() + " mentioned " + avengersArrayList.get(i).getFrequency() + " time(s) ");
 					
