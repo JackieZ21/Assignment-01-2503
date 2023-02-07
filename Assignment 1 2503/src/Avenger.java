@@ -91,6 +91,6 @@ public class Avenger implements Comparable<Avenger> {
 	 */
 	@Override
 	public String toString() {
-		return this.alias + " " + this.lastName + " " + this.frequency;
+		return this.alias + " aka " + this.lastName + " mentioned " + this.frequency + "time(s)";
 	}
 }
