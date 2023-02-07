@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -25,12 +27,12 @@ public class A1 {
 	private int totalwordcount = 0;
 	private ArrayList<Avenger> avengersArrayList = new ArrayList<>();
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		A1 a1 = new A1();
 		a1.run();
 	}
 
-	public void run() {
+	public void run() throws FileNotFoundException {
 		
 		readInput();
 		printResults();
@@ -39,9 +41,10 @@ public class A1 {
 	/**
 	 * read the input stream and keep track  
 	 * how many times avengers are mentioned by alias or last name.
+	 * @throws FileNotFoundException 
 	 */
 	
-	private void readInput() {
+	private void readInput() throws FileNotFoundException {
 		/**
 		 * In a loop, while the scanner object has not reached end of stream,
 		 *	- read a word.
@@ -52,7 +55,8 @@ public class A1 {
 			*	- if this avenger has not been mentioned before, add the newly created avenger to the list, remember to set the frequency.	
 		
 		*/ 
-		input = new Scanner(System.in);
+		//input = new Scanner(System.in);
+		Scanner input = new Scanner(new File("src/input2.txt"));
 		while(input.hasNext()) {
 		  String word = input.next().trim().toLowerCase().replaceAll("[^a-z]", "");
 		  if (word.length()>0) {
