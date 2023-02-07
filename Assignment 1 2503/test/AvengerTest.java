@@ -4,12 +4,17 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class AvengerTest {
-
+	/**
+	 * test the creation of a new Avenger with their Alias
+	 */
 	@Test
 	void testAvenger() {
-		fail("Not yet implemented");
+		Avenger avenger = new Avenger("Iron Man", "Stark");
+		assertNotNull(avenger);
 	}
-
+	/**
+	 * test the get method for alias
+	 */
 	@Test
 	void testGetAlias() {
 		Avenger avenger = new Avenger( "captainamerica", "rogers" );
@@ -17,12 +22,19 @@ class AvengerTest {
 		String result = avenger.getAlias();
 		assertEquals(result, expected);
 	}
-
+	/**
+	 * test the get method for getting the last name
+	 */
 	@Test
 	void testGetLastName() {
-		fail("Not yet implemented");
+		Avenger avenger = new Avenger("captain America", "rogers");
+	    String expected = "rogers";
+	    String result = avenger.getLastName();
+	    assertEquals(expected, result);
 	}
-
+	/**
+	 * test the get method for the frequency the Avenger is shown
+	 */
 	@Test
 	void testGetFrequency() {
 		Avenger avenger = new Avenger("Iron Man", "Stark");
@@ -30,90 +42,52 @@ class AvengerTest {
 		int result = avenger.getFrequency();
 		assertEquals(expected, result);
 	}
-
+	/**
+	 * test the get method for the order the Avenger is in 
+	 */
 	@Test
 	void testGetOrder() {
-		fail("Not yet implemented");
+		Avenger avenger = new Avenger("Iron Man", "Stark");
+		int expected = 0;
+		int result = avenger.getOrder();
+		assertEquals(result, expected);
 	}
-
+	/**
+	 * test the set method to set the Avenger's order 
+	 */
 	@Test
 	void testSetOrder() {
-		fail("Not yet implemented");
+		Avenger avenger = new Avenger("Iron Man", "Stark");
+		int expected = 10;
+		avenger.setOrder(10);
+		int result = avenger.getOrder();
+		assertEquals(result, expected);
 	}
-
+	/**
+	 * test the increase frequency method for the Avenger 
+	 */
 	@Test
 	void testIncreaseFrequency() {
-		fail("Not yet implemented");
+		Avenger avenger = new Avenger("Iron Man", "Stark");
+		int expected = 2;
+		avenger.increaseFrequency();
+		avenger.increaseFrequency();
+		int result = avenger.getFrequency();
+		assertEquals(result, expected);
 	}
 
-	@Test
-	void testCompareTo() {
-		fail("Not yet implemented");
-	}
+	/**
+	 * test the to string method to output the Avengers in the correct order
+	 */
 
 	@Test
 	void testToString() {
-		fail("Not yet implemented");
+		Avenger avenger = new Avenger("Iron Man", "Stark");
+		String expected = "Iron Man (Stark)";
+		String result = avenger.toString();
+		assertEquals(result, expected);
 	}
 
-	@Test
-	void testObject() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetClass() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testHashCode() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testEquals() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testClone() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testToString1() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testNotify() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testNotifyAll() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testWait() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testWaitLong() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testWaitLongInt() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testFinalize() {
-		fail("Not yet implemented");
-	}
+	
 
 }
